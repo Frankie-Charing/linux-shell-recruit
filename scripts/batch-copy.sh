@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-# Task 08: this script is intentionally buggy.
+# Task 08: copy multiple files into a destination directory.
 # Usage: ./scripts/batch-copy.sh DEST FILE...
 
-destination=$1
+destination="$1"
 shift
 
-mkdir -p $destination
+mkdir -p "$destination"
 
-for file in $@
+for file in "$@"
 do
-    cp $file $destination/
+    cp "$file" "$destination/"
 done
